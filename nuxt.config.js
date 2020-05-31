@@ -42,6 +42,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
+    'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
@@ -57,6 +58,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
+    vendor: ['socket.io-client'],
     postcss: {
       preset: {
         features: {
@@ -67,6 +69,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(_config, _ctx) {}
   }
 }
